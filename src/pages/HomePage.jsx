@@ -38,7 +38,7 @@ export default function HomePage() {
       <section className="hero-section" id="home">
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-title">Luxury Camper & SUV Rentals<br />Starting from $19/day</h1>
+            <h1 className="hero-title">Luxury Camper & SUV Rentals<br />Starting from $199/day</h1>
             <p className="hero-desc">
               Experience the freedom of the open road with our handpicked fleet of premium adventure camper vans and executive SUVs. Seamless booking, zero hidden fees, and 24/7 dedicated concierge assistance.
             </p>
