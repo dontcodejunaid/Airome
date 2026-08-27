@@ -7,7 +7,7 @@ export default function FeaturesBanner() {
         <div className="feature-col-content">
           <h3 className="feature-col-title">Expert Drivers</h3>
           <p className="feature-col-desc">
-            Voluptas consequuntur dolore nesciunt fugit obcaecati a nisi enim veritatis, doloremque, saepe id possimus tempore
+            Professional, highly vetted chauffeurs and expedition navigators trained for all terrain and weather conditions.
           </p>
         </div>
       </div>
@@ -16,7 +16,7 @@ export default function FeaturesBanner() {
         <div className="feature-col-content">
           <h3 className="feature-col-title">No Hidden Charges</h3>
           <p className="feature-col-desc">
-            Voluptas consequuntur dolore nesciunt fugit obcaecati a nisi enim veritatis, doloremque, saepe id possimus tempore
+            100% transparent daily rates including insurance, unlimited mileage options, and zero surprise checkout fees.
           </p>
         </div>
       </div>
@@ -25,7 +25,7 @@ export default function FeaturesBanner() {
         <div className="feature-col-content">
           <h3 className="feature-col-title">Friendly Behavior</h3>
           <p className="feature-col-desc">
-            Voluptas consequuntur dolore nesciunt fugit obcaecati a nisi enim veritatis, doloremque, saepe id possimus tempore
+            Dedicated 24/7 concierge staff committed to ensuring your road trip is smooth, safe, and truly unforgettable.
           </p>
         </div>
       </div>

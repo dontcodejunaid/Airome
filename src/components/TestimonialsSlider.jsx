@@ -3,21 +3,21 @@ import React, { useState } from 'react';
 const testimonialsData = [
   {
     name: 'John Doe',
-    role: 'Designer',
+    role: 'Creative Director',
     avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
-    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    quote: 'Airoame made our coastal California road trip an absolute breeze. The camper van was immaculately clean, comfortable, and equipped with everything we needed for an off-grid getaway.'
   },
   {
     name: 'Rebeca Doe',
-    role: 'Designer',
+    role: 'Travel Photographer',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
-    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    quote: 'Exceptional service and total peace of mind. The vehicle handled mountain terrain effortlessly, and having 24/7 concierge support made all the difference during our trip.'
   },
   {
     name: 'Stella Doe',
-    role: 'Designer',
+    role: 'Product Designer',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    quote: 'The booking process was crystal clear with zero unexpected charges. Returning the vehicle was seamless and quick. I highly recommend Airoame to anyone seeking premium travel rentals.'
   },
   {
     name: 'Marcus Vance',
