@@ -1,0 +1,300 @@
+/* ==========================================================================
+   AIROAME - AUTHENTICATION & PASSWORD RESET STYLES
+   ========================================================================== */
+
+/* Split Screen Layout (Login / Register) */
+.auth-split-wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #141517;
+}
+
+.auth-split-image {
+  flex: 1.1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.auth-split-image.login-bg {
+  background-image: url('https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=1400&q=80');
+}
+
+.auth-split-image.register-bg {
+  background-image: url('https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1400&q=80');
+}
+
+.auth-split-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.auth-split-form-panel {
+  flex: 0.9;
+  background: #191b1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  min-height: 100vh;
+}
+
+.auth-form-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-register-card {
+  max-width: 520px;
+}
+
+.auth-brand-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.auth-brand-logo {
+  font-family: var(--font-logo);
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.auth-form-group {
+  margin-bottom: 20px;
+}
+
+.auth-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.auth-form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d1d5db;
+  margin-bottom: 8px;
+}
+
+.auth-input,
+.auth-select {
+  width: 100%;
+  background: #111214;
+  border: 1px solid #2d3137;
+  border-radius: var(--radius-sm);
+  padding: 13px 16px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.auth-input:focus,
+.auth-select:focus {
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 0 2px rgba(217, 20, 132, 0.2);
+}
+
+.auth-input::placeholder {
+  color: #6b7280;
+}
+
+/* Phone input with country code */
+.auth-phone-group {
+  display: flex;
+  gap: 8px;
+}
+
+.auth-phone-prefix {
+  background: #111214;
+  border: 1px solid #2d3137;
+  border-radius: var(--radius-sm);
+  padding: 13px 14px;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.auth-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 24px;
+  font-size: 0.875rem;
+}
+
+.auth-remember-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.auth-remember-label input[type="checkbox"] {
+  accent-color: var(--primary-pink);
+  width: 16px;
+  height: 16px;
+}
+
+.auth-forgot-link {
+  color: #9ca3af;
+  transition: color var(--transition-fast);
+}
+
+.auth-forgot-link:hover {
+  color: var(--primary-pink);
+}
+
+/* Captcha Block */
+.auth-captcha-box {
+  background: #0d1b3e;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  user-select: none;
+}
+
+.captcha-digits {
+  font-family: 'Courier New', monospace;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 12px;
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+  transform: skewX(-10deg);
+}
+
+.captcha-refresh-btn {
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.captcha-refresh-btn:hover {
+  color: #38bdf8;
+  transform: rotate(90deg);
+}
+
+.captcha-refresh-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-auth-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 12px;
+  transition: all var(--transition-fast);
+}
+
+.btn-auth-submit:hover {
+  background: var(--gradient-hover);
+  box-shadow: 0 4px 18px rgba(217, 20, 132, 0.45);
+}
+
+.auth-switch-prompt {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.auth-switch-prompt a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.auth-switch-prompt a:hover {
+  color: var(--primary-pink);
+}
+
+/* ==========================================================================
+   RESET PASSWORD (GLASSMORPHISM FULLSCREEN LAYOUT)
+   ========================================================================== */
+.reset-fullscreen-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-image: linear-gradient(to bottom, rgba(10, 15, 22, 0.45), rgba(10, 15, 22, 0.7)),
+                    url('https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=1900&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.reset-glass-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(22, 24, 28, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid #0284c7;
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  box-shadow: 0 0 35px rgba(2, 132, 199, 0.35), 0 20px 50px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.reset-brand-logo {
+  font-family: var(--font-logo);
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.reset-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.reset-form {
+  text-align: left;
+}
+
+.reset-form .auth-form-group {
+  margin-bottom: 22px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .auth-split-wrapper { flex-direction: column; }
+  .auth-split-image { min-height: 240px; flex: none; }
+  .auth-split-form-panel { padding: 40px 24px; min-height: auto; }
+}
+
+@media (max-width: 500px) {
+  .auth-form-row { grid-template-columns: 1fr; }
+  .reset-glass-card { padding: 36px 20px; }
+}
