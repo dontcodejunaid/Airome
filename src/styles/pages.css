@@ -1043,22 +1043,159 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .catalog-layout { grid-template-columns: 1fr; }
-  .contact-layout { grid-template-columns: 1fr; }
-  .service-layout { grid-template-columns: 1fr; }
-  .about-grid { grid-template-columns: 1fr; gap: 36px; }
-  .about-image-wrapper { height: 380px; }
-  .blogs-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-cards-grid { grid-template-columns: 1fr; }
+  .catalog-layout { 
+    grid-template-columns: 1fr; 
+    gap: 28px;
+  }
+  .filter-sidebar {
+    padding: 22px;
+  }
+  .contact-layout { 
+    grid-template-columns: 1fr; 
+    gap: 32px;
+  }
+  .service-layout { 
+    grid-template-columns: 1fr; 
+    gap: 32px;
+  }
+  .service-cta-card {
+    position: static;
+  }
+  .about-grid { 
+    grid-template-columns: 1fr; 
+    gap: 36px; 
+  }
+  .about-image-wrapper { 
+    height: 360px; 
+  }
+  .adventure-collage-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    margin: 50px 0 60px;
+  }
+  .blog-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 24px;
+  }
+  .contact-cards-grid { 
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-section,
+  .about-company-section,
+  .blog-section,
+  .contact-main-section,
+  .service-details-section,
+  .legal-content-section {
+    padding: 40px 0 60px;
+  }
+  .catalog-top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .catalog-search-wrapper {
+    max-width: 100%;
+  }
+  .catalog-sort-wrapper {
+    justify-content: space-between;
+  }
+  .vehicles-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 18px;
+  }
+  .vehicle-card-img-box {
+    height: 180px;
+  }
+  .vehicle-card-body {
+    padding: 16px;
+  }
+  .about-stats-row { 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 14px;
+  }
+  .stat-box {
+    padding: 16px 12px;
+  }
+  .stat-box h3 {
+    font-size: 1.6rem;
+  }
+  .service-hero-img-box {
+    height: 260px;
+  }
+  .contact-info-panel, 
+  .contact-form-panel { 
+    padding: 28px 20px; 
+  }
+  .contact-map-wrapper {
+    height: 300px;
+    margin-top: 32px;
+  }
+  .legal-container { 
+    padding: 32px 20px; 
+  }
 }
 
 @media (max-width: 640px) {
-  .vehicles-grid { grid-template-columns: 1fr; }
-  .about-stats-row { grid-template-columns: 1fr; }
-  .about-image-wrapper { height: 300px; }
-  .blogs-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .contact-form-row { grid-template-columns: 1fr; }
-  .contact-info-panel, .contact-form-panel { padding: 28px 20px; }
-  .legal-container { padding: 32px 20px; }
+  .vehicles-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .vehicle-card-img-box {
+    height: 200px;
+  }
+  .about-stats-row { 
+    grid-template-columns: 1fr; 
+  }
+  .about-image-wrapper { 
+    height: 260px; 
+  }
+  .about-experience-badge {
+    padding: 14px 18px;
+    bottom: 14px;
+    left: 14px;
+  }
+  .badge-number {
+    font-size: 1.8rem;
+  }
+  .adventure-collage-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 36px 0 44px;
+  }
+  .blog-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .category-pill {
+    padding: 6px 14px;
+    font-size: 0.82rem;
+  }
+  .form-row { 
+    grid-template-columns: 1fr; 
+  }
+  .contact-form-row { 
+    grid-template-columns: 1fr; 
+  }
+  .contact-card {
+    padding: 24px 18px;
+    gap: 14px;
+  }
+  .contact-card-icon {
+    width: 46px;
+    height: 46px;
+  }
+  .filter-price-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .pagination-wrapper {
+    gap: 6px;
+  }
+  .page-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.88rem;
+  }
 }

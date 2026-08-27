@@ -45,8 +45,8 @@ export default function BookingModal({ vehicle, onClose }) {
           Daily Rate: <strong style={{ color: '#fff' }}>${vehicle.price.toFixed(2)}/day</strong> • {vehicle.seats} • {vehicle.transmission}
         </p>
 
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+        <form onSubmit={handleSubmit} className="booking-modal-form" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div className="booking-modal-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
             <div className="form-group">
               <label className="form-label" style={{ color: '#ddd' }}>Rental Days</label>
               <input 
@@ -82,7 +82,7 @@ export default function BookingModal({ vehicle, onClose }) {
             />
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+          <div className="booking-modal-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
             <div className="form-group">
               <label className="form-label" style={{ color: '#ddd' }}>Email Address</label>
               <input 

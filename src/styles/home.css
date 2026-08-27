@@ -759,17 +759,158 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero-title { font-size: 3rem; }
-  .fleet-showcase-container { grid-template-columns: 1fr; padding: 32px; }
-  .fleet-thumbnails-list { flex-direction: row; justify-content: center; }
-  .search-form-grid, .search-form-row-2 { grid-template-columns: 1fr 1fr; }
-  .pricing-cards-grid { grid-template-columns: 1fr; gap: 48px; }
-  .testimonials-grid { grid-template-columns: 1fr; }
+  .hero-section {
+    min-height: 600px;
+    padding-top: 100px;
+  }
+  .hero-title { 
+    font-size: 3rem; 
+  }
+  .fleet-showcase-container { 
+    grid-template-columns: 1fr; 
+    padding: 32px 24px; 
+    gap: 28px;
+  }
+  .fleet-thumbnails-list { 
+    flex-direction: row; 
+    justify-content: center;
+    order: 2;
+    flex-wrap: wrap;
+  }
+  .fleet-main-preview {
+    order: 1;
+    height: 320px;
+  }
+  .fleet-details-panel {
+    order: 3;
+  }
+  .search-form-grid, 
+  .search-form-row-2 { 
+    grid-template-columns: 1fr 1fr; 
+  }
+  .pricing-cards-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 36px; 
+  }
+  .testimonials-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-title { font-size: 2.3rem; }
-  .search-widget-card { padding: 28px 20px; }
-  .search-form-grid, .search-form-row-2 { grid-template-columns: 1fr; }
-  .features-grid-section { grid-template-columns: 1fr; }
+  .hero-section {
+    height: auto;
+    min-height: 520px;
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+  .hero-title { 
+    font-size: 2.3rem; 
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero-desc {
+    font-size: 0.92rem;
+    margin-bottom: 24px;
+  }
+  .hero-actions {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .search-section-standalone {
+    padding: 24px 0 10px;
+  }
+  .search-widget-card { 
+    padding: 28px 18px; 
+    border-radius: 12px;
+  }
+  .search-widget-title {
+    font-size: 1.75rem;
+  }
+  .search-form-grid, 
+  .search-form-row-2 { 
+    grid-template-columns: 1fr; 
+    gap: 14px;
+  }
+  .fleet-section {
+    padding: 40px 0 60px;
+  }
+  .fleet-showcase-container {
+    padding: 24px 16px;
+    border-radius: var(--radius-lg);
+  }
+  .fleet-main-preview {
+    height: 240px;
+  }
+  .fleet-model-title {
+    font-size: 1.75rem;
+  }
+  .fleet-thumb-item {
+    width: 75px;
+    height: 56px;
+  }
+  .features-grid-section { 
+    grid-template-columns: 1fr; 
+  }
+  .feature-col-card {
+    padding: 50px 24px;
+    min-height: 240px;
+  }
+  .pricing-section {
+    padding: 60px 0;
+  }
+  .pricing-cards-grid { 
+    grid-template-columns: 1fr; 
+    gap: 36px;
+  }
+  .testimonials-section {
+    padding: 60px 0 80px;
+  }
+  .testimonials-slider-box {
+    padding: 28px 18px;
+  }
+  .testimonials-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .faq-section {
+    padding: 60px 0;
+  }
+  .faq-question-btn {
+    padding: 18px 20px;
+    font-size: 0.98rem;
+  }
+  .faq-item.active .faq-answer-panel {
+    padding: 16px 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .hero-title {
+    font-size: 1.9rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .fleet-price-amount {
+    font-size: 2rem;
+  }
+  .fleet-thumb-item {
+    width: 65px;
+    height: 50px;
+  }
+  .pricing-card-main {
+    padding: 32px 22px 28px;
+  }
 }

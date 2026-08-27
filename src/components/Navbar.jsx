@@ -133,7 +133,26 @@ export default function Navbar({ isInternal = false }) {
           <img src="/brand-logo.png" alt="Airoame" className="site-brand-logo-img" />
         </Link>
 
+        {/* Backdrop for mobile drawer */}
+        <div 
+          className={`mobile-nav-backdrop ${mobileOpen ? 'active' : ''}`}
+          onClick={() => setMobileOpen(false)}
+        />
+
         <nav className={`nav-menu ${mobileOpen ? 'active' : ''}`}>
+          <div className="mobile-menu-header">
+            <Link to="/" className="brand-logo-link" onClick={() => handleNavClick('home', '/')}>
+              <img src="/brand-logo.png" alt="Airoame" className="site-brand-logo-img" />
+            </Link>
+            <button 
+              className="mobile-close-btn" 
+              onClick={() => setMobileOpen(false)}
+              aria-label="Close menu"
+            >
+              &times;
+            </button>
+          </div>
+
           <div 
             className="nav-sliding-indicator"
             style={{
@@ -197,7 +216,14 @@ export default function Navbar({ isInternal = false }) {
               type="button"
               ref={el => navLinksRef.current['about'] = el}
               className={`nav-link-btn dropdown-toggle ${activeTab === 'about' ? 'active' : ''}`}
-              onClick={() => handleNavClick('about', '/about')}
+              onClick={(e) => {
+                if (window.innerWidth <= 992) {
+                  e.preventDefault();
+                  setDropdownOpen(prev => !prev);
+                } else {
+                  handleNavClick('about', '/about');
+                }
+              }}
             >
               About Us
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -213,24 +239,40 @@ export default function Navbar({ isInternal = false }) {
               <Link to="/faq" className="dropdown-item" onClick={() => handleNavClick('about', '/faq')}>F.A.Q.</Link>
             </div>
           </div>
+
+          {/* Mobile auth buttons inside drawer */}
+          <div className="mobile-auth-section">
+            {currentUser ? (
+              <div className="user-badge mobile-user-badge">
+                <span className="user-avatar-circle">{currentUser.firstName ? currentUser.firstName[0].toUpperCase() : 'U'}</span>
+                <span>{currentUser.firstName || currentUser.username}</span>
+                <button onClick={handleLogout} className="btn-logout">Logout</button>
+              </div>
+            ) : (
+              <div className="mobile-auth-buttons">
+                <Link to="/login" className="btn btn-nav-login" onClick={() => setMobileOpen(false)}>Login</Link>
+                <Link to="/register" className="btn btn-nav-register" onClick={() => setMobileOpen(false)}>Register</Link>
+              </div>
+            )}
+          </div>
         </nav>
 
         <div className="nav-actions">
           {currentUser ? (
-            <div className="user-badge">
+            <div className="user-badge desktop-only-badge">
               <span className="user-avatar-circle">{currentUser.firstName ? currentUser.firstName[0].toUpperCase() : 'U'}</span>
               <span>{currentUser.firstName || currentUser.username}</span>
               <button onClick={handleLogout} className="btn-logout">Logout</button>
             </div>
           ) : (
-            <>
+            <div className="desktop-auth-buttons">
               <Link to="/login" className="btn btn-nav-login">Login</Link>
               <Link to="/register" className="btn btn-nav-register">Register</Link>
-            </>
+            </div>
           )}
 
           <button 
-            className="mobile-toggle" 
+            className={`mobile-toggle ${mobileOpen ? 'open' : ''}`} 
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation"
           >
